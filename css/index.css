@@ -1,0 +1,46 @@
+#taskbar, #taskbar-bg {
+    height: 101px;
+    width: 100%;
+}
+
+#taskbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(40, 127, 9, 0.71);
+    color: #fff;
+}
+
+#taskbar-bg {
+    position: absolute;
+    z-index: -10;
+    background-color: rgba(40, 127, 9, 1);
+}
+
+#taskbar #name {
+    font-size: 20px;
+    letter-spacing: 0.35em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 190px;
+    margin-right: auto;
+}
+
+#taskbar #links {
+    margin-right: 190px;
+}
+
+#taskbar #links a {
+    text-decoration: none;
+    transition: color .25s;
+    color: #D4DBCE;
+    height: 50px;
+    padding: 0 10px;
+}
+
+#taskbar #links a:hover {
+    color: #fff;
+}
