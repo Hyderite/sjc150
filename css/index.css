@@ -12,6 +12,7 @@
     z-index: 10;
     background-color: rgba(40, 127, 9, 0.71);
     color: #fff;
+    transition: margin-top .5s;
 }
 
 #taskbar-bg {
