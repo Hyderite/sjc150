@@ -6,13 +6,13 @@
     --horizontal-rect-animation-delay: 0s;
 }
 
-#taskbar, #taskbar-bg {
+#navbar, #navbar-bg {
     height: 80px;
     width: 100%;
     transform: translateY(-80px);
 }
 
-#taskbar {
+#navbar {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -23,13 +23,13 @@
     transition: margin-top .5s;
 }
 
-#taskbar-bg {
+#navbar-bg {
     position: absolute;
     z-index: -10;
     background-color: rgba(40, 127, 9, 1);
 }
 
-#taskbar #name {
+#navbar #name {
     font-size: 20px;
     letter-spacing: 0.35em;
     font-weight: bold;
@@ -39,11 +39,11 @@
     margin-right: auto;
 }
 
-#taskbar #links {
+#navbar #links {
     margin-right: 10%;
 }
 
-#taskbar #links a {
+#navbar #links a {
     text-decoration: none;
     transition: color .25s;
     color: #D4DBCE;
@@ -51,7 +51,7 @@
     padding: 0 10px;
 }
 
-#taskbar #links a:hover {
+#navbar #links a:hover {
     color: #fff;
 }
 
