@@ -1,3 +1,18 @@
+document.querySelector("#box-1").style.animation = "enlarge .75s forwards";
+document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
+
+document.addEventListener("visibilitychange", () => {
+    if (window.scrollY == 0) {
+        if (document.visibilityState === "visible") {
+            document.querySelector("#box-1").style.animation = "enlarge .75s forwards";
+            document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
+        } else {
+            document.querySelector("#box-1").style.animation = "none";
+            document.querySelector("#box-1-text-container-th").style.animation = "none";
+        };
+    };
+});
+
 const main2Title = document.querySelector("#main-2-title"), main2Text = document.querySelector("#main-2-text"), verticalRect = document.querySelector("#vertical-rect"), horizontalRect = document.querySelector("#horizontal-rect"), main2Image = document.querySelector("#main-2-image")
 var scrollOffset = 100;
 
