@@ -5,3 +5,52 @@ body, html {
     padding: 0;
     font-family: "Montserrat", sans-serif;
 }
+
+#navbar, #navbar-bg {
+    height: 80px;
+    width: 100%;
+    transform: translateY(-80px);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(40, 127, 9, 0.71);
+    color: #fff;
+    transition: margin-top .5s;
+}
+
+#navbar-bg {
+    position: absolute;
+    z-index: -10;
+    background-color: rgba(40, 127, 9, 1);
+}
+
+#navbar #name {
+    font-size: 20px;
+    letter-spacing: 0.35em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+#navbar #links {
+    margin-right: 10%;
+}
+
+#navbar #links a {
+    text-decoration: none;
+    transition: color .25s;
+    color: #D4DBCE;
+    height: 50px;
+    padding: 0 10px;
+}
+
+#navbar #links a:hover {
+    color: #fff;
+}

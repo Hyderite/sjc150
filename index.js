@@ -4,7 +4,11 @@ const app = express()
 app.use(require("express").static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/timeline", (req, res) => {
+    res.sendFile(__dirname + "/public/timeline.html");
 });
 
 /* app.get("/comms", (req, res) => {
