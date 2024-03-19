@@ -3,5 +3,9 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", "Cabin", sans-serif;
+}
+
+p {
+    font-family: "Cabin", "Montserrat", sans-serif;
 }
