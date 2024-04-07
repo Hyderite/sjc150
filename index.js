@@ -11,6 +11,10 @@ app.get("/timeline", (req, res) => {
     res.sendFile(__dirname + "/public/timeline.html");
 });
 
+app.get("/gallery", (req, res) => {
+    res.sendFile(__dirname + "/public/gallery.html");
+});
+
 /* app.get("/comms", (req, res) => {
     res.send("<script>window.open('https://comms.hyderite.dev', '_self');</script>");
 });

@@ -1,0 +1,55 @@
+#navbar, #navbar-bg {
+    transform: translateY(0);
+}
+
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    transform: translateY(90px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    flex-basis: 250px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image {
+    transition: transform .25s;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.card:hover > .card-image {
+    transform: scale(1.15);
+}
+
+.card:hover > .overlay {
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    padding: 5px;
+    transform: translateY(calc(100% - 30px));
+    position: absolute;
+    bottom: 0;
+    text-decoration: none;
+    transition: transform .35s;
+}
