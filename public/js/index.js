@@ -21,6 +21,8 @@ setTimeout(function () {
     }, 500);
 }, 500);
 
+// rmb to make mobile version (vertical -> long line = a single horizontal line, short, translate = shorter)
+
 setTimeout(function () {
     navbar.style.transition = "transform .5s";
     navbar.style.transform = "translateY(-80px)";
@@ -49,18 +51,42 @@ setTimeout(function () {
     }, 350);
 }, 4350);
 
-
-/* document.addEventListener("visibilitychange", () => {
+// rmb to copy the piece of code above
+document.addEventListener("visibilitychange", () => {
     if (window.scrollY == 0) {
         if (document.visibilityState === "visible") {
-            document.querySelector("#box-1").style.animation = "enlarge .75s forwards";
-            document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
+            setTimeout(function () { document.querySelector("#main-2").style.opacity = "1"; }, 100);
+            setTimeout(function () {
+                document.querySelector("#sjc-150-logo").style.opacity = ".65";
+                document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
+                setTimeout(function () {
+                    document.querySelector("#long-line").style.width = "30px";
+                    setTimeout(function () { document.querySelector("#long-line-2").style.height = "calc(" + document.querySelector("#text").offsetHeight + "px + 3.5em)"; }, 350);
+                    setTimeout(function () {
+                        document.querySelector("#long-line-3").style.width = "30px";
+                        document.querySelector("#long-line-3").style.transform = "translate(calc(-" + document.querySelector("#text").offsetWidth + "px - 31px), -2px)";
+                    }, 700);
+                    setTimeout(function () {
+                        document.querySelector("#text").style.opacity = "1";
+                        document.querySelector("#text").style.transform = "translateX(0)";
+                        document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
+                    }, 1150);
+                }, 450);
+            }, 350);
         } else {
-            document.querySelector("#box-1").style.animation = "none";
+            document.querySelector("#main-2").style.opacity = "0";
+            document.querySelector("#sjc-150-logo").style.opacity = "0";
+            document.querySelector("#sjc-150-logo").style.transform = "translateX(-30px)";
+            document.querySelector("#long-line").style.width = "0";
+            document.querySelector("#long-line-2").style.height = "0";
+            document.querySelector("#long-line-3").style.width = "0";
+            document.querySelector("#long-line-3").style.transform = "none";
+            document.querySelector("#text").style.opacity = "0";
+            document.querySelector("#text").style.transform = "translateX(30px)";
             document.querySelector("#box-1-text-container-th").style.animation = "none";
         };
     };
-}); */
+});
 
 const main2Title = document.querySelector("#main-2-title"), main2Text = document.querySelector("#main-2-text"), verticalRect = document.querySelector("#vertical-rect"), horizontalRect = document.querySelector("#horizontal-rect"), main2Image = document.querySelector("#main-2-image")
 var scrollOffset = 100;
@@ -95,5 +121,3 @@ const handleScrollAnimation = () => {
 window.addEventListener('scroll', () => {
     handleScrollAnimation();
 });
-
-// navbar item on hover change color of other items
