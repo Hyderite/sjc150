@@ -53,6 +53,48 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row;
+}
+
+#sjc-150-logo {
+    width: 35vh;
+    aspect-ratio: 1;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity .35s, transform .35s;
+}
+
+#text-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#long-line, #long-line-3 {
+    border-top: #ffffff 2.5px solid;
+    width: 0;
+    transition: width .35s;
+}
+
+#long-line-3 {
+    margin-top: auto;
+}
+
+#long-line-2 {
+    border-right: #ffffff 2.5px solid;
+    height: 0;
+    transition: height .35s;
+    transform: translateX(-30px);
+}
+
+#text {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform .35s, opacity .35s;
+    letter-spacing: 0.08em;
+    color: #b3b3b3;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Object Sans", "Cabin", sans-serif;
 }
 
 #main-1 #box-1 {
@@ -77,6 +119,10 @@ body {
     #main-2-title {
         font-size: 7vw !important;
         font-weight: bold;
+    }
+
+    #sjc-150-logo {
+        transform: translateY(-30px);
     }
 }
 
