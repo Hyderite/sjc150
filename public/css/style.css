@@ -3,11 +3,34 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", "Cabin", sans-serif;
+    font-family: "Object Sans", "Cabin", sans-serif;
+}
+
+body {
+    overflow: overlay;
 }
 
 p {
-    font-family: "Cabin", "Montserrat", sans-serif;
+    font-family: "Cabin", "Object Sans", sans-serif;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f283b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff6f;
+    transition: background-color .25s;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffffa3;
 }
 
 #navbar, #navbar-bg {
@@ -22,7 +45,7 @@ p {
     justify-content: flex-end;
     position: fixed;
     z-index: 10;
-    background-color: rgba(40, 127, 9, 0.71);
+    background-color: rgba(32, 32, 32, 0.71);
     color: #fff;
     transition: margin-top .5s;
 }
@@ -30,10 +53,10 @@ p {
 #navbar-bg {
     position: absolute;
     z-index: -10;
-    background-color: rgba(40, 127, 9, 1);
+    background-color: rgb(32, 32, 32);
 }
 
-#navbar #name {
+#navbar #logo {
     font-size: 20px;
     letter-spacing: 0.35em;
     font-weight: bold;
