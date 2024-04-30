@@ -140,7 +140,7 @@ body {
     }
 
     #main-2-image {
-        width: 40%;
+        width: 40vh;
     }
 }
 
@@ -374,7 +374,7 @@ body {
 }
 
 #main-2-image {
-    max-width: 400px;
+    max-width: 40vh;
     aspect-ratio: 1;
     opacity: 0;
 }
