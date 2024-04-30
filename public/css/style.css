@@ -64,6 +64,12 @@ p {
     text-decoration: none;
     margin-left: 10%;
     margin-right: auto;
+    opacity: .5;
+    transition: opacity .35s;
+}
+
+#navbar #logo:hover {
+    opacity: 1;
 }
 
 #navbar #links {
@@ -71,14 +77,34 @@ p {
 }
 
 #navbar #links a {
+    position: relative;
     text-decoration: none;
     transition: color .25s;
-    color: #D4DBCE;
+    color: #fff;
     height: 50px;
     padding: 0 10px;
 }
 
-#navbar #links a:hover {
-    color: #fff;
+#navbar #links:hover > a {
+    color: #868686;
 }
 
+#navbar #links a:hover {
+    color: #fff !important;
+}
+
+#navbar #links a::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    color: #fff;
+    width: 0;
+    border-bottom: #fff 1.5px solid;
+    transform: translateY(2px);
+    transition: width .35s;
+}
+
+#navbar #links a:hover::after {
+    width: calc(100% - 20px);
+}

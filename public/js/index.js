@@ -33,7 +33,7 @@ setTimeout(function () {
     document.querySelector("#main-1").style.height = "calc(100% - 80px)";
     setTimeout(function () { document.querySelector("#main-2").style.opacity = "1"; }, 100);
     setTimeout(function () {
-        document.querySelector("#sjc-150-logo").style.opacity = ".65";
+        document.querySelector("#sjc-150-logo").style.opacity = "1";
         document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
         setTimeout(function () {
             document.querySelector("#long-line").style.width = "30px";
@@ -57,7 +57,7 @@ document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
             setTimeout(function () { document.querySelector("#main-2").style.opacity = "1"; }, 100);
             setTimeout(function () {
-                document.querySelector("#sjc-150-logo").style.opacity = ".65";
+                document.querySelector("#sjc-150-logo").style.opacity = "1";
                 document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
                 setTimeout(function () {
                     document.querySelector("#long-line").style.width = "30px";

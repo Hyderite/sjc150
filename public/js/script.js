@@ -13,3 +13,4 @@ window.addEventListener("scroll", function () {
 }, false);
 
 // navbar item on hover change color of other items, darker color
+

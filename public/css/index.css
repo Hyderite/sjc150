@@ -278,7 +278,7 @@ body {
 #vertical-rect::before {
     content: "";
     position: absolute;
-    border-right: #181f31 5px solid;
+    border-right: #202020 5px solid;
     height: 20px;
     transform: translate(12px, -20px);
     z-index: 1;
@@ -293,7 +293,7 @@ body {
 }
 
 #horizontal-rect {
-    border-bottom: #181f31 2.5px solid;
+    border-bottom: #202020 2.5px solid;
     width: 15px;
     margin-left: auto;
 }
@@ -313,7 +313,7 @@ body {
 #horizontal-rect::before {
     content: "";
     position: absolute;
-    border-bottom: #181f31 5px solid;
+    border-bottom: #202020 5px solid;
     width: 25px;
     transform: translate(15.5px, -2px);
     z-index: 1;
