@@ -35,22 +35,22 @@ p {
 
 ::selection {
     background: #b1b1b199 !important; 
-   background-color: #b1b1b199 !important; 
-  color: #ffffff !important;
+    background-color: #b1b1b199 !important; 
+    color: #ffffff !important;
 }
 p::-moz-selection {
     background: #b1b1b199 !important; 
-   background-color: #b1b1b199 !important;
+    background-color: #b1b1b199 !important;
     color: #ffffff !important;
 }
 p::selection { 
-   background: #b1b1b199 !important; 
-   background-color: #b1b1b199 !important;
+    background: #b1b1b199 !important; 
+    background-color: #b1b1b199 !important;
     color: #ffffff !important;
 }
 ::-moz-selection {
     background: #b1b1b199 !important; 
-   background-color: #b1b1b199 !important;
+    background-color: #b1b1b199 !important;
     color: #ffffff !important;
 }
 
