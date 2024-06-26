@@ -6,7 +6,7 @@ function animation() {
 };
 
 animation();
-document.querySelector("#main").style.transform = "translateY(" + window.pageYOffset + document.querySelector("#sjc-img").getBoundingClientRect().top + "px)";
+document.querySelector("#timeline").style.transform = "translateY(calc(100% - " + document.querySelector("#sjc-img").offsetHeight + "px + 150px + " + document.querySelector(".item").offsetHeight + "px))";
 
 document.addEventListener("visibilitychange", () => {
     if (window.scrollY == 0) {
@@ -16,4 +16,10 @@ document.addEventListener("visibilitychange", () => {
             document.querySelector("#sjc-img").style.animation = "none";
         };
     };
+});
+
+// parallax scrolling
+
+document.body.addEventListener("scroll", function () {
+    document.body.backgroundPosition = "0 " + (document.body.scrollTop * -0.3) + "px";
 });
