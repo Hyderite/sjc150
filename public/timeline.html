@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0,height=device-height, maximum-scale=1, user-scalable=0">
-    <title>Timeline - SJC150</title>
+    <title>SJC150 - Timeline</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
@@ -13,14 +13,16 @@
     <link href="https://fonts-sjc150.pages.dev/object-sans.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/timeline.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/files/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/files/images/150logo.png">
 </head>
 
 <body>
     <div id="navbar-bg"></div>
     <div id="navbar">
-        <a id="logo" href="/"><img style="width: 60px; aspect-ratio: 1;" src="/files/images/150-white.png"
-                draggable="false"></a>
+        <a id="logo" href="/">
+            <img style="width: 80px; aspect-ratio: 1;" src="/files/images/150logo-transparent.png" draggable="false"> 
+            <img style="width: 80px; aspect-ratio: 1;" src="/files/images/sjc_badge.png" draggable="false"> 
+        </a> 
         <div id="links">
             <a href="/">Home</a>
             <a href="/timeline">Timeline</a>
@@ -28,21 +30,26 @@
             <a href="/gallery">Gallery</a>
         </div>
     </div>
+
+    
     <div id="background-img"></div>
     <div id="sjc-img">
-        <img src="/files/images/sjc.png" alt="St. Joseph's College school badge">
+        <img src="/files/images/150logo-transparent.png" alt="SJC 150">
     </div>
+
     <div id="main">
-        <div id="title">St. Joseph's College 150th Anniversary</div>
         <div id="timeline">
-            <div class="month">test</div> <!-- id="e.g. january" -->
+            <div class="month"> </div> <!-- id="e.g. january" -->
             <!-- Embedding a widget for now, for demonstrative purposes only> -->
+
             <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
             <div class="commonninja_component pid-17667942-e66f-406d-827b-fae80e241272"></div>
         </div>
     </div>
+
     <script src="/js/script.js" type="text/javascript"></script>
     <script src="/js/timeline.js" type="text/javascript"></script>
+
 </body>
 
 </html>
