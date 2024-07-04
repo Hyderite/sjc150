@@ -87,10 +87,12 @@ p::selection {
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-    margin-left: 10%;
+    margin-left: 3%;
     margin-right: auto;
     opacity: .5;
     transition: opacity .35s;
+    display: flex;
+    align-items: center;
 }
 
 #navbar #logo:hover {
@@ -98,7 +100,7 @@ p::selection {
 }
 
 #navbar #links {
-    margin-right: 10%;
+    margin-right: 3%;
 }
 
 #navbar #links a {
