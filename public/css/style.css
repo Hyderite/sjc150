@@ -11,7 +11,7 @@ body {
 }
 
 p {
-    font-family: "Cabin", "Object Sans", sans-serif;
+    font-family: "Cabin", sans-serif;
 }
 
 
@@ -52,6 +52,10 @@ p::selection {
     background: #b1b1b199 !important; 
     background-color: #b1b1b199 !important;
     color: #ffffff !important;
+}
+
+.title {
+    font-family: "Zilla Slab", "Object Sans", "Cabin", sans-serif;
 }
 
 #navbar, #navbar-bg {
