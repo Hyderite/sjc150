@@ -47,6 +47,7 @@
     width: calc(100% - 5px);
     height: calc(100% - 5px);
     padding: 5px;
+    padding-left: 15px;
     transform: translateY(calc(100% - 30px));
     position: absolute;
     bottom: 0;
