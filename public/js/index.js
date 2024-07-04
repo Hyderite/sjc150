@@ -11,14 +11,14 @@ setTimeout(function () {
     document.querySelector("#loading-cross").style.opacity = "1";
     document.querySelector("#loading-cross").style.marginTop = "0";
     setTimeout(function () {
-        document.querySelector("#loading-cross").style.transform = "rotate(720deg)";
+        document.querySelector("#loading-cross").style.transform = "rotate(1000deg)"; // loading-cross rotation speed
         setTimeout(function () {
             document.querySelector("#loading").style.opacity = "0";
             setTimeout(function () {
                 document.querySelector("#loading").style.display = "none";
             }, 350);
-        }, 3000);
-    }, 500);
+        }, 2000); // loading animation duration
+    }, 300); // loading-cross rotation speed
 }, 500);
 
 // rmb to make mobile version (vertical -> long line = a single horizontal line, short, translate = shorter)
@@ -49,7 +49,7 @@ setTimeout(function () {
             }, 1150);
         }, 450);
     }, 350);
-}, 4350);
+}, 3350); // navbar and main-1 delay
 
 // rmb to copy the piece of code above
 document.addEventListener("visibilitychange", () => {
