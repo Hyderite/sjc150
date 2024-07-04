@@ -20,17 +20,16 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-    background: #202020;
+    background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #ffffff6f;
+    background-color: #0000006f;
     transition: background-color .25s;
-    border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ffffffa3;
+    background: #000000a3;
 }
 
 ::selection {
@@ -70,7 +69,7 @@ p::selection {
     justify-content: flex-end;
     position: fixed;
     z-index: 10;
-    background-color: rgba(32, 32, 32, 0.71);
+    background-color: rgba(255, 255, 255, 0.71);
     color: #fff;
     transition: margin-top .5s;
 }
@@ -78,14 +77,13 @@ p::selection {
 #navbar-bg {
     position: absolute;
     z-index: -10;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(255, 255, 255);
 }
 
 #navbar #logo {
     font-size: 20px;
     letter-spacing: 0.35em;
     font-weight: bold;
-    color: #fff;
     text-decoration: none;
     margin-left: 3%;
     margin-right: auto;
@@ -107,17 +105,17 @@ p::selection {
     position: relative;
     text-decoration: none;
     transition: color .25s;
-    color: #fff;
+    color: #000;
     height: 50px;
     padding: 0 10px;
 }
 
 #navbar #links:hover > a {
-    color: #868686;
+    color: #a8a8a8;
 }
 
 #navbar #links a:hover {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 #navbar #links a::after {
@@ -125,9 +123,9 @@ p::selection {
     position: absolute;
     left: 10px;
     bottom: 0;
-    color: #fff;
+    color: #000;
     width: 0;
-    border-bottom: #fff 1.5px solid;
+    border-bottom: #000 1.5px solid;
     transform: translateY(2px);
     transition: width .35s;
 }
