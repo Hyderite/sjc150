@@ -1,8 +1,15 @@
-sessionStorage.setItem("newTab", JSON.stringify("1"));
+let sessionStorageCheck = sessionStorage.getItem("newTab");
 
-let newTabStatus = JSON.parse(sessionStorage.getItem("newTab"));
+if (sessionStorageCheck != undefined) {
+    noAnimation();
+} else if (sessionStorageCheck == undefined) {
+    sessionStorage.setItem("newTab", "1");
+    runAnimation();
+} else if (sessionStorageCheck == "0") {
+    sessionStorage.clear();
+};
 
-if (newTabStatus != undefined) {
+function runAnimation() {
     let navbar = document.querySelector("#navbar");
 
     navbar.style.transform = "translateY(-160px)";
@@ -53,7 +60,35 @@ if (newTabStatus != undefined) {
             }, 450);
         }, 350);
     }, 2550); // navbar and main-1 delay
-    sessionStorage.clear();
+    sessionStorage.setItem("newTab", "0");
+};
+
+function noAnimation() {
+    navbar.style.transition = "transform .5s";
+    navbar.style.transform = "translateY(-80px)";
+    document.querySelector("#navbar-bg").style.transform = "translateY(-80px)";
+    document.querySelector("#main-1").style.transition = "margin-top .5s, height .5s";
+    document.querySelector("#main-1").style.marginTop = "80px";
+    document.body.style.position = "static";
+    document.querySelector("#main-1").style.height = "calc(100% - 80px)";
+    setTimeout(function () { document.querySelector("#main-2").style.opacity = "1"; }, 100);
+    setTimeout(function () {
+        document.querySelector("#sjc-150-logo").style.opacity = "1";
+        document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
+        setTimeout(function () {
+            document.querySelector("#long-line").style.width = "30px";
+            setTimeout(function () { document.querySelector("#long-line-2").style.height = "calc(" + document.querySelector("#text").offsetHeight + "px + 3.5em)"; }, 350);
+            setTimeout(function () {
+                document.querySelector("#long-line-3").style.width = "30px";
+                document.querySelector("#long-line-3").style.transform = "translate(calc(-" + document.querySelector("#text").offsetWidth + "px - 31px), -2px)";
+            }, 700);
+            setTimeout(function () {
+                document.querySelector("#text").style.opacity = "1";
+                document.querySelector("#text").style.transform = "translateX(0)";
+                document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
+            }, 1150);
+        }, 450);
+    }, 350);
 };
 
 // rmb to copy the piece of code above
