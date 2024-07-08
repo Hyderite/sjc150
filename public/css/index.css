@@ -48,8 +48,7 @@ body {
     width: 100%;
     height: calc(100% - 80px);
     margin-top: 80px;
-    background: linear-gradient(rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.75)), center / cover no-repeat url(/files/images/background-index.webp);
+    background: center / cover no-repeat url(/files/images/background-index.webp);
     display: flex;
     justify-content: center;
     align-items: center;
