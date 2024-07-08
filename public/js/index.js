@@ -17,8 +17,8 @@ setTimeout(function () {
             setTimeout(function () {
                 document.querySelector("#loading").style.display = "none";
             }, 350);
-        }, 2000); // loading animation duration
-    }, 300); // loading-cross rotation speed
+        }, 1500); // loading animation duration
+    }, 225); // loading-cross rotation speed
 }, 500);
 
 // rmb to make mobile version (vertical -> long line = a single horizontal line, short, translate = shorter)
@@ -49,7 +49,7 @@ setTimeout(function () {
             }, 1150);
         }, 450);
     }, 350);
-}, 3350); // navbar and main-1 delay
+}, 2550); // navbar and main-1 delay
 
 // rmb to copy the piece of code above
 document.addEventListener("visibilitychange", () => {
