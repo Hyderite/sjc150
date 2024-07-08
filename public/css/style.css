@@ -53,6 +53,16 @@ p::selection {
     color: #ffffff !important;
 }
 
+@media (any-hover: hover) {
+    #navbar #links:hover > a {
+        color: #000;
+    }
+
+    #navbar #links a::after {
+        display: none;
+    }
+}
+
 .title {
     font-family: "Zilla Slab", "Object Sans", "Cabin", sans-serif;
 }
