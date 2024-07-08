@@ -34,6 +34,7 @@ function runAnimation() {
     }, 500);
 
     setTimeout(function () {
+        document.querySelector("#filter").style.opacity = "0";
         navbar.style.transition = "transform .5s";
         navbar.style.transform = "translateY(-80px)";
         document.querySelector("#navbar-bg").style.transform = "translateY(-80px)";
@@ -64,6 +65,7 @@ function runAnimation() {
 };
 
 function noAnimation() {
+    document.querySelector("#filter").style.display = "none";
     navbar.style.transition = "transform .5s";
     navbar.style.transform = "translateY(-80px)";
     document.querySelector("#navbar-bg").style.transform = "translateY(-80px)";

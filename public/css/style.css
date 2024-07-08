@@ -78,7 +78,7 @@ p::selection {
     align-items: center;
     justify-content: flex-end;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     background-color: rgba(255, 255, 255, 0.71);
     color: #fff;
     transition: margin-top .5s;
