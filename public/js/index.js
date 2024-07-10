@@ -14,7 +14,7 @@ function runAnimation() {
 
     navbar.style.transform = "translateY(-160px)";
     document.querySelector("#navbar-bg").style.transform = "translateY(-160px)";
-    document.querySelector("#main-1").style.marginTop = "0";
+    document.querySelector(".main-1").style.marginTop = "0";
 
     document.querySelector("#sjc-150-logo-loading").style.opacity = "1";
     document.querySelector("#sjc-150-logo-loading").style.marginTop = "0";
@@ -37,12 +37,12 @@ function runAnimation() {
         navbar.style.transition = "transform .5s";
         navbar.style.transform = "translateY(-80px)";
         document.querySelector("#navbar-bg").style.transform = "translateY(-80px)";
-        document.querySelector("#main-1").style.transition = "margin-top .5s, height .5s";
-        document.querySelector("#main-1").style.marginTop = "80px";
+        document.querySelector(".main-1").style.transition = "margin-top .5s, height .5s";
+        document.querySelector(".main-1").style.marginTop = "80px";
         document.body.style.position = "static";
-        document.querySelector("#main-1").style.height = "calc(100vh - 80px)";
+        document.querySelector(".main-1").style.height = "calc(100vh - 80px)";
         setTimeout(function () {
-            document.querySelector("#main-2").style.opacity = "1";
+            document.querySelector(".main-2").style.opacity = "1";
             document.querySelector("#filter").style.display = "none";
         }, 100);
         setTimeout(function () {
@@ -70,12 +70,12 @@ function noAnimation() {
     navbar.style.transition = "transform .5s";
     navbar.style.transform = "translateY(-80px)";
     document.querySelector("#navbar-bg").style.transform = "translateY(-80px)";
-    document.querySelector("#main-1").style.transition = "margin-top .5s, height .5s";
-    document.querySelector("#main-1").style.marginTop = "80px";
+    document.querySelector(".main-1").style.transition = "margin-top .5s, height .5s";
+    document.querySelector(".main-1").style.marginTop = "80px";
     document.body.style.position = "static";
-    document.querySelector("#main-1").style.height = "calc(100vh - 80px)";
+    document.querySelector(".main-1").style.height = "calc(100vh - 80px)";
     setTimeout(function () {
-        document.querySelector("#main-2").style.opacity = "1";
+        document.querySelector(".main-2").style.opacity = "1";
         document.querySelector("#filter").style.display = "none";
     }, 100);
     setTimeout(function () {
@@ -99,7 +99,7 @@ function noAnimation() {
 document.addEventListener("visibilitychange", () => {
     if (window.scrollY == 0) {
         if (document.visibilityState === "visible") {
-            setTimeout(function () { document.querySelector("#main-2").style.opacity = "1"; }, 100);
+            setTimeout(function () { document.querySelector(".main-2").style.opacity = "1"; }, 100);
             setTimeout(function () {
                 document.querySelector("#sjc-150-logo").style.opacity = "1";
                 document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
@@ -118,7 +118,7 @@ document.addEventListener("visibilitychange", () => {
                 }, 450);
             }, 350);
         } else {
-            document.querySelector("#main-2").style.opacity = "0";
+            document.querySelector(".main-2").style.opacity = "0";
             document.querySelector("#sjc-150-logo").style.opacity = "0";
             document.querySelector("#sjc-150-logo").style.transform = "translateX(-30px)";
             document.querySelector("#long-line").style.width = "0";
@@ -132,7 +132,7 @@ document.addEventListener("visibilitychange", () => {
     };
 });
 
-const main2Title = document.querySelector("#main-2-title"), main2Text = document.querySelector("#main-2-text"), verticalRect = document.querySelector("#vertical-rect"), horizontalRect = document.querySelector("#horizontal-rect"), main2Image = document.querySelector("#main-2-image")
+const main2Title = document.querySelector(".main-2-title"), main2Text = document.querySelector(".main-2-text"), verticalRect = document.querySelector("#vertical-rect"), horizontalRect = document.querySelector("#horizontal-rect"), main2Image = document.querySelector(".main-2-image")
 var scrollOffset = 100;
 
 const elementInView = (el, offset = 0) => {
