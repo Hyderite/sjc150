@@ -9,8 +9,8 @@
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.75)), center / cover no-repeat fixed url(/files/images/background-timeline.webp);
+    background: linear-gradient(rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)), center / cover no-repeat fixed url(/files/images/background-timeline.webp);
 }
 
 #body {
@@ -61,7 +61,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 10px));
+    transform: translate(-50%, calc(-50% + 40px));
     transform-origin: left top;
     padding: 10px;
     margin: 0;
@@ -69,6 +69,6 @@ body {
 }
 
 #sjc-img img {
-    width: 100px;
+    width: 150px;
     aspect-ratio: 1;
 }
