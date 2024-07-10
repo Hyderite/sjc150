@@ -99,40 +99,44 @@ function noAnimation() {
 document.addEventListener("visibilitychange", () => {
     if (window.scrollY == 0) {
         if (document.visibilityState === "visible") {
-            setTimeout(function () { document.querySelector(".main-2").style.opacity = "1"; }, 100);
+            document.querySelector("#main-1-content").style.transition = "transform .5s, opacity .5s";
+            document.querySelector("#scroll-down-btn").style.transition = "opacity .35s, background-color .35s";
             setTimeout(function () {
-                document.querySelector("#sjc-150-logo").style.opacity = "1";
-                document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
+                document.querySelector(".main-2").style.opacity = "1";
+                document.querySelector("#filter").style.display = "none";
+            }, 100);
+            setTimeout(function () {
+                document.querySelector("#main-1-content").style.transform = "translateX(0)";
+                document.querySelector("#main-1-content").style.opacity = "1";
                 setTimeout(function () {
-                    document.querySelector("#long-line").style.width = "30px";
-                    setTimeout(function () { document.querySelector("#long-line-2").style.height = "calc(" + document.querySelector("#text").offsetHeight + "px + 3.5em)"; }, 350);
+                    document.querySelector("#p1").style.transform = "translateY(0)";
+                    document.querySelector("#p1").style.opacity = "1";
                     setTimeout(function () {
-                        document.querySelector("#long-line-3").style.width = "30px";
-                        document.querySelector("#long-line-3").style.transform = "translate(calc(-" + document.querySelector("#text").offsetWidth + "px - 31px), -2px)";
-                    }, 700);
-                    setTimeout(function () {
-                        document.querySelector("#text").style.opacity = "1";
-                        document.querySelector("#text").style.transform = "translateX(0)";
-                        document.querySelector("#box-1-text-container-th").style.animation = "1s black-to-green .75s forwards";
-                    }, 1150);
-                }, 450);
+                        document.querySelector("#p2").style.transform = "translateY(0)";
+                        document.querySelector("#p2").style.opacity = "1";
+                        setTimeout(function () {
+                            document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
+                            document.querySelector("#scroll-down-btn").style.opacity = "1";
+                        }, 350);
+                    }, 350);
+                }, 350);
             }, 350);
         } else {
-            document.querySelector(".main-2").style.opacity = "0";
-            document.querySelector("#sjc-150-logo").style.opacity = "0";
-            document.querySelector("#sjc-150-logo").style.transform = "translateX(-30px)";
-            document.querySelector("#long-line").style.width = "0";
-            document.querySelector("#long-line-2").style.height = "0";
-            document.querySelector("#long-line-3").style.width = "0";
-            document.querySelector("#long-line-3").style.transform = "none";
-            document.querySelector("#text").style.opacity = "0";
-            document.querySelector("#text").style.transform = "translateX(30px)";
+            document.querySelector("#main-1-content").style.transition = "none";
+            document.querySelector("#scroll-down-btn").style.transition = "none";
+            document.querySelector("#main-1-content").style.opacity = "0";
+            document.querySelector("#main-1-content").style.transform = "translateX(-50px)";
+            document.querySelector("#p1").style.opacity = "0";
+            document.querySelector("#p1").style.transform = "translateY(30px)";
+            document.querySelector("#p2").style.opacity = "0";
+            document.querySelector("#p2").style.transform = "translateY(30px)";
+            document.querySelector("#scroll-down-btn").style.opacity = "0";
             document.querySelector("#box-1-text-container-th").style.animation = "none";
         };
     };
 });
 
-const main2Title = document.querySelector(".main-2-title"), main2Text = document.querySelector(".main-2-text"), verticalRect = document.querySelector("#vertical-rect"), horizontalRect = document.querySelector("#horizontal-rect"), main2Image = document.querySelector(".main-2-image")
+const main2Title = document.querySelector("#main-2-title"), main2Text = document.querySelector("#main-2-text"), verticalRect = document.querySelector("#vertical-rect"), horizontalRect = document.querySelector("#horizontal-rect"), main2Image = document.querySelector("#main-2-image")
 var scrollOffset = 100;
 
 const elementInView = (el, offset = 0) => {
