@@ -12,8 +12,8 @@
 }
 
 .card {
-    flex-basis: 250px;
-    border-radius: 15px;
+    flex-basis: 300px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 15px;
     overflow: hidden;
