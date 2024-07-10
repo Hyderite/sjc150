@@ -7,7 +7,11 @@
 }
 
 body {
-    position: fixed;
+    position: absolute;
+}
+
+html {
+    height: auto;
 }
 
 #loading {
@@ -46,12 +50,27 @@ body {
 
 #main-1 {
     width: 100%;
-    height: calc(100% - 80px);
+    height: 100vh;
     margin-top: 80px;
     background: center / cover no-repeat url(/files/images/background-index.webp);
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    flex-flow: row wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+#main-1-content {
+    display: flex;
     align-items: center;
+    background: rgb(255,255,255);
+    background-color: #fff;
+    filter: drop-shadow(20px 0px 10px #fff);
+    width: 40%;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform .5s, opacity .5s;
 }
 
 #filter {
@@ -64,45 +83,19 @@ body {
     transition: opacity .35s;
 }
 
-#sjc-150-logo {
-    width: 25vh;
-    margin: 35px;
-    aspect-ratio: 1;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity .35s, transform .35s;
-}
-
-#text-container {
-    display: flex;
-    align-items: flex-start;
-}
-
-#long-line, #long-line-3 {
-    border-top: #ffffff 2.5px solid;
-    width: 0;
-    transition: width .35s;
-}
-
-#long-line-3 {
-    margin-top: auto;
-}
-
-#long-line-2 {
-    border-right: #ffffff 2.5px solid;
-    height: 0;
-    transition: height .35s;
-    transform: translateX(-30px);
-}
-
 #text {
+    letter-spacing: 0.08em;
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 65px;
+}
+
+#text #p1, #text #p2 {
     transform: translateY(30px);
     opacity: 0;
     transition: transform .35s, opacity .35s;
-    letter-spacing: 0.08em;
-    color: #b3b3b3;
-    font-weight: bold;
-    font-size: 30px;
+    display: inline-block;
 }
 
 #main-1 #box-1 {
@@ -181,25 +174,39 @@ body {
 }
 
 #box-1-text-container-th {
-    color: #fff;
+    transition: background-image .35s, color .35s;
+    background-image: url("/files/images/black.png");
+    color: #000;
+    background-position: center;
+    background-size: cover;
+    backface-visibility: hidden;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
 }
 
-@keyframes white-to-green {
+@keyframes black-to-green {
     from {
-        color: #fff;
+        color: #000;
+        background-image: url("/files/images/black.png");
     } to {
         color: #2d9007;
+        background-image: url("/files/images/green.png");
     }
 }
 
 #main-2 {
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: 100vh;
+    display: none;
     justify-content: flex-end;
     align-items: center;
     flex-flow: row wrap;
     background-color: #202020;
+    position: relative;
+    z-index: 1;
 }
 
 #main-2-left {

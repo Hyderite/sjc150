@@ -15,7 +15,6 @@ function runAnimation() {
     navbar.style.transform = "translateY(-160px)";
     document.querySelector("#navbar-bg").style.transform = "translateY(-160px)";
     document.querySelector("#main-1").style.marginTop = "0";
-    document.querySelector("#main-1").style.height = "100%";
 
     document.querySelector("#sjc-150-logo-loading").style.opacity = "1";
     document.querySelector("#sjc-150-logo-loading").style.marginTop = "0";
@@ -41,24 +40,25 @@ function runAnimation() {
         document.querySelector("#main-1").style.transition = "margin-top .5s, height .5s";
         document.querySelector("#main-1").style.marginTop = "80px";
         document.body.style.position = "static";
-        document.querySelector("#main-1").style.height = "calc(100% - 80px)";
-        setTimeout(function () { document.querySelector("#main-2").style.opacity = "1"; }, 100);
+        document.querySelector("#main-1").style.height = "calc(100vh - 80px)";
         setTimeout(function () {
-            document.querySelector("#sjc-150-logo").style.opacity = "1";
-            document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
+            document.querySelector("#main-2").style.opacity = "1";
+            document.querySelector("#filter").style.display = "none";
+        }, 100);
+        setTimeout(function () {
+            document.querySelector("#main-1-content").style.transform = "translateX(0)";
+            document.querySelector("#main-1-content").style.opacity = "1";
             setTimeout(function () {
-                document.querySelector("#long-line").style.width = "30px";
-                setTimeout(function () { document.querySelector("#long-line-2").style.height = "calc(" + document.querySelector("#text").offsetHeight + "px + 3.5em)"; }, 350);
+                document.querySelector("#p1").style.transform = "translateY(0)";
+                document.querySelector("#p1").style.opacity = "1";
                 setTimeout(function () {
-                    document.querySelector("#long-line-3").style.width = "30px";
-                    document.querySelector("#long-line-3").style.transform = "translate(calc(-" + document.querySelector("#text").offsetWidth + "px - 31px), -2px)";
-                }, 700);
-                setTimeout(function () {
-                    document.querySelector("#text").style.opacity = "1";
-                    document.querySelector("#text").style.transform = "translateX(0)";
-                    document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
-                }, 1150);
-            }, 450);
+                    document.querySelector("#p2").style.transform = "translateY(0)";
+                    document.querySelector("#p2").style.opacity = "1";
+                    setTimeout(function () {
+                        document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
+                    }, 350);
+                }, 350);
+            }, 350);
         }, 350);
     }, 2550); // navbar and main-1 delay
     sessionStorage.setItem("newTab", "0");
@@ -66,30 +66,32 @@ function runAnimation() {
 
 function noAnimation() {
     document.querySelector("#filter").style.display = "none";
+    document.querySelector("#loading").style.display = "none";
     navbar.style.transition = "transform .5s";
     navbar.style.transform = "translateY(-80px)";
     document.querySelector("#navbar-bg").style.transform = "translateY(-80px)";
     document.querySelector("#main-1").style.transition = "margin-top .5s, height .5s";
     document.querySelector("#main-1").style.marginTop = "80px";
     document.body.style.position = "static";
-    document.querySelector("#main-1").style.height = "calc(100% - 80px)";
-    setTimeout(function () { document.querySelector("#main-2").style.opacity = "1"; }, 100);
+    document.querySelector("#main-1").style.height = "calc(100vh - 80px)";
     setTimeout(function () {
-        document.querySelector("#sjc-150-logo").style.opacity = "1";
-        document.querySelector("#sjc-150-logo").style.transform = "translateX(0)";
+        document.querySelector("#main-2").style.opacity = "1";
+        document.querySelector("#filter").style.display = "none";
+    }, 100);
+    setTimeout(function () {
+        document.querySelector("#main-1-content").style.transform = "translateX(0)";
+        document.querySelector("#main-1-content").style.opacity = "1";
         setTimeout(function () {
-            document.querySelector("#long-line").style.width = "30px";
-            setTimeout(function () { document.querySelector("#long-line-2").style.height = "calc(" + document.querySelector("#text").offsetHeight + "px + 3.5em)"; }, 350);
+            document.querySelector("#p1").style.transform = "translateY(0)";
+            document.querySelector("#p1").style.opacity = "1";
             setTimeout(function () {
-                document.querySelector("#long-line-3").style.width = "30px";
-                document.querySelector("#long-line-3").style.transform = "translate(calc(-" + document.querySelector("#text").offsetWidth + "px - 31px), -2px)";
-            }, 700);
-            setTimeout(function () {
-                document.querySelector("#text").style.opacity = "1";
-                document.querySelector("#text").style.transform = "translateX(0)";
-                document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
-            }, 1150);
-        }, 450);
+                document.querySelector("#p2").style.transform = "translateY(0)";
+                document.querySelector("#p2").style.opacity = "1";
+                setTimeout(function () {
+                    document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
+                }, 350);
+            }, 350);
+        }, 350);
     }, 350);
 };
 
@@ -111,7 +113,7 @@ document.addEventListener("visibilitychange", () => {
                     setTimeout(function () {
                         document.querySelector("#text").style.opacity = "1";
                         document.querySelector("#text").style.transform = "translateX(0)";
-                        document.querySelector("#box-1-text-container-th").style.animation = "1s white-to-green .75s forwards";
+                        document.querySelector("#box-1-text-container-th").style.animation = "1s black-to-green .75s forwards";
                     }, 1150);
                 }, 450);
             }, 350);
