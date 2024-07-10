@@ -35,22 +35,22 @@ p {
 ::selection {
     background: #b1b1b199 !important; 
     background-color: #b1b1b199 !important; 
-    color: #ffffff !important;
+    color: #000 !important;
 }
 p::-moz-selection {
     background: #b1b1b199 !important; 
-    background-color: #b1b1b199 !important;
-    color: #ffffff !important;
+    background-color: 000#b1b1b199 !important;
+    color: #000 !important;
 }
 p::selection { 
     background: #b1b1b199 !important; 
     background-color: #b1b1b199 !important;
-    color: #ffffff !important;
+    color: #000 !important;
 }
 ::-moz-selection {
     background: #b1b1b199 !important; 
     background-color: #b1b1b199 !important;
-    color: #ffffff !important;
+    color: #000 !important;
 }
 
 @media (pointer: none), (pointer: coarse) {
