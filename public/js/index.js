@@ -70,7 +70,6 @@ function noAnimation() {
     navbar.style.transition = "transform .5s";
     navbar.style.transform = "translateY(-80px)";
     document.querySelector("#navbar-bg").style.transform = "translateY(-80px)";
-    document.querySelector(".main-1").style.transition = "margin-top .5s, height .5s";
     document.querySelector(".main-1").style.marginTop = "80px";
     document.body.style.position = "static";
     document.querySelector(".main-1").style.height = "calc(100vh - 80px)";
@@ -89,6 +88,7 @@ function noAnimation() {
                 document.querySelector("#p2").style.opacity = "1";
                 setTimeout(function () {
                     document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
+                    document.querySelector("#scroll-down-btn").style.opacity = "1";
                 }, 350);
             }, 350);
         }, 350);

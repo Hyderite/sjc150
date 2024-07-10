@@ -197,6 +197,60 @@ html {
     }
 }
 
+.main-1 #scroll-down-btn {
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+    opacity: 0;
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    transition: opacity .35s, background-color .35s;
+}
+
+.main-1 #scroll-down-btn #scroll-down-btn-arrow {
+    animation: down 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-delay: 3.4s;
+    fill: #000;
+    stroke-width: 0px;
+    transition: fill .35s;
+    width: 30px;
+    height: 30px;
+    padding-left: 3.5px;
+    padding-top: 4px;
+}
+
+.main-1 #scroll-down-btn:hover {
+    background-color: #2d9007;
+}
+
+.main-1 #scroll-down-btn:hover > #scroll-down-btn-arrow {
+    fill: #fff;
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(0);
+    } 12.5% {
+        transform: translateY(5px);
+    } 25% {
+        transform: translateY(0);
+    } 37.5% {
+        transform: translateY(5px);
+    } 50% {
+        transform: translateY(0);
+    }
+}
+
 .main-2 {
     width: 100%;
     height: 100vh;
