@@ -64,8 +64,7 @@ html {
 #main-1-content {
     display: flex;
     align-items: center;
-    background: rgb(255,255,255);
-    background-color: #fff;
+    background: rgb(255, 255, 255, .65);
     filter: drop-shadow(20px 0px 10px #fff);
     width: 40%;
     transform: translateX(-50px);
@@ -96,20 +95,6 @@ html {
     opacity: 0;
     transition: transform .35s, opacity .35s;
     display: inline-block;
-}
-
-.main-1 #box-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 597px;
-    height: 153px;
-    padding: 30px 50px;
-    background-color: rgb(0, 0, 0, .75);
-    border-radius: 16px;
-    transform: scale(0.75) translateZ(0);
-    opacity: 0;
-    transition: transform .5s;
 }
 
 @media (max-width: 400px) {
