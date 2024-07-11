@@ -56,6 +56,7 @@ function runAnimation() {
                     document.querySelector("#p2").style.opacity = "1";
                     setTimeout(function () {
                         document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
+                        document.querySelector("#scroll-down-btn").style.opacity = "1";
                     }, 350);
                 }, 350);
             }, 350);
