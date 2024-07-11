@@ -49,11 +49,11 @@ function runAnimation() {
             document.querySelector("#main-1-content").style.transform = "translateX(0)";
             document.querySelector("#main-1-content").style.opacity = "1";
             setTimeout(function () {
-                document.querySelector("#p1").style.transform = "translateY(0)";
-                document.querySelector("#p1").style.opacity = "1";
+                document.querySelector("#main-1-content #p1").style.transform = "translateY(0)";
+                document.querySelector("#main-1-content #p1").style.opacity = "1";
                 setTimeout(function () {
-                    document.querySelector("#p2").style.transform = "translateY(0)";
-                    document.querySelector("#p2").style.opacity = "1";
+                    document.querySelector("#main-1-content #p2").style.transform = "translateY(0)";
+                    document.querySelector("#main-1-content #p2").style.opacity = "1";
                     setTimeout(function () {
                         document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
                         document.querySelector("#scroll-down-btn").style.opacity = "1";
@@ -82,11 +82,11 @@ function noAnimation() {
         document.querySelector("#main-1-content").style.transform = "translateX(0)";
         document.querySelector("#main-1-content").style.opacity = "1";
         setTimeout(function () {
-            document.querySelector("#p1").style.transform = "translateY(0)";
-            document.querySelector("#p1").style.opacity = "1";
+            document.querySelector("#main-1-content #p1").style.transform = "translateY(0)";
+            document.querySelector("#main-1-content #p1").style.opacity = "1";
             setTimeout(function () {
-                document.querySelector("#p2").style.transform = "translateY(0)";
-                document.querySelector("#p2").style.opacity = "1";
+                document.querySelector("#main-1-content #p2").style.transform = "translateY(0)";
+                document.querySelector("#main-1-content #p2").style.opacity = "1";
                 setTimeout(function () {
                     document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
                     document.querySelector("#scroll-down-btn").style.opacity = "1";
@@ -110,11 +110,11 @@ document.addEventListener("visibilitychange", () => {
                 document.querySelector("#main-1-content").style.transform = "translateX(0)";
                 document.querySelector("#main-1-content").style.opacity = "1";
                 setTimeout(function () {
-                    document.querySelector("#p1").style.transform = "translateY(0)";
-                    document.querySelector("#p1").style.opacity = "1";
+                    document.querySelector("#main-1-content #p1").style.transform = "translateY(0)";
+                    document.querySelector("#main-1-content #p1").style.opacity = "1";
                     setTimeout(function () {
-                        document.querySelector("#p2").style.transform = "translateY(0)";
-                        document.querySelector("#p2").style.opacity = "1";
+                        document.querySelector("#main-1-content #p2").style.transform = "translateY(0)";
+                        document.querySelector("#main-1-content #p2").style.opacity = "1";
                         setTimeout(function () {
                             document.querySelector("#box-1-text-container-th").style.animation = "black-to-green .35s forwards";
                             document.querySelector("#scroll-down-btn").style.opacity = "1";
@@ -127,17 +127,17 @@ document.addEventListener("visibilitychange", () => {
             document.querySelector("#scroll-down-btn").style.transition = "none";
             document.querySelector("#main-1-content").style.opacity = "0";
             document.querySelector("#main-1-content").style.transform = "translateX(-50px)";
-            document.querySelector("#p1").style.opacity = "0";
-            document.querySelector("#p1").style.transform = "translateY(30px)";
-            document.querySelector("#p2").style.opacity = "0";
-            document.querySelector("#p2").style.transform = "translateY(30px)";
+            document.querySelector("#main-1-content #p1").style.opacity = "0";
+            document.querySelector("#main-1-content #p1").style.transform = "translateY(30px)";
+            document.querySelector("#main-1-content #p2").style.opacity = "0";
+            document.querySelector("#main-1-content #p2").style.transform = "translateY(30px)";
             document.querySelector("#scroll-down-btn").style.opacity = "0";
             document.querySelector("#box-1-text-container-th").style.animation = "none";
         };
     };
 });
 
-const main2Title = document.querySelector("#main-2-title"), main2Text = document.querySelector("#main-2-text"), verticalRect = document.querySelector("#vertical-rect"), horizontalRect = document.querySelector("#horizontal-rect"), main2Image = document.querySelector("#main-2-image")
+const main2Title = document.querySelector("#main-2-title"), main2Text = document.querySelector("#main-2-text"), main2VerticalRect = document.querySelector("#main-2-left #vertical-rect"), main2HorizontalRect = document.querySelector("#main-2-left #horizontal-rect"), main2Image = document.querySelector("#main-2-image")
 var scrollOffset = 100;
 
 const elementInView = (el, offset = 0) => {
@@ -152,12 +152,12 @@ const elementInView = (el, offset = 0) => {
 const displayScrollElement = () => {
     main2Title.classList.add("main-2-scrolled");
     main2Text.classList.add("main-2-scrolled");
-    verticalRect.style.setProperty("--vertical-rect-animation", "expand-vertical-rect .5s");
-    verticalRect.style.setProperty("--rect-animation-fill-mode", "forwards");
-    verticalRect.style.setProperty("--vertical-rect-animation-delay", ".65s");
-    horizontalRect.style.setProperty("--horizontal-rect-animation", "expand-horizontal-rect .5s");
-    horizontalRect.style.setProperty("--rect-animation-fill-mode", "forwards");
-    horizontalRect.style.setProperty("--horizontal-rect-animation-delay", ".95s");
+    main2VerticalRect.style.setProperty("--vertical-rect-animation", "expand-vertical-rect .5s");
+    main2VerticalRect.style.setProperty("--rect-animation-fill-mode", "forwards");
+    main2VerticalRect.style.setProperty("--vertical-rect-animation-delay", ".65s");
+    main2HorizontalRect.style.setProperty("--horizontal-rect-animation", "expand-horizontal-rect .5s");
+    main2HorizontalRect.style.setProperty("--rect-animation-fill-mode", "forwards");
+    main2HorizontalRect.style.setProperty("--horizontal-rect-animation-delay", ".95s");
     main2Image.classList.add("main-2-scrolled");
 };
 
@@ -169,4 +169,38 @@ const handleScrollAnimation = () => {
 
 window.addEventListener('scroll', () => {
     handleScrollAnimation();
+});
+
+const main3Title = document.querySelector("#main-3-title"), main3Text = document.querySelector("#main-3-text"), main3VerticalRect = document.querySelector("#main-3-right #vertical-rect"), main3HorizontalRect = document.querySelector("#main-3-right #horizontal-rect"), main3Image = document.querySelector("#main-3-image")
+var scrollOffset = 100;
+
+const elementInView2 = (el, offset = 0) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    return (
+        elementTop <=
+        ((window.innerHeight || document.documentElement.clientHeight) - offset)
+    );
+};
+
+const displayScrollElement2 = () => {
+    main3Title.classList.add("main-3-scrolled");
+    main3Text.classList.add("main-3-scrolled");
+    main3VerticalRect.style.setProperty("--vertical-rect-animation", "expand-vertical-rect .5s");
+    main3VerticalRect.style.setProperty("--rect-animation-fill-mode", "forwards");
+    main3VerticalRect.style.setProperty("--vertical-rect-animation-delay", ".65s");
+    main3HorizontalRect.style.setProperty("--horizontal-rect-animation-inverted", "expand-horizontal-rect-inverted .5s");
+    main3HorizontalRect.style.setProperty("--rect-animation-fill-mode", "forwards");
+    main3HorizontalRect.style.setProperty("--horizontal-rect-animation-delay", ".95s");
+    main3Image.classList.add("main-3-scrolled");
+};
+
+const handleScrollAnimation2 = () => {
+    if (elementInView2(main3Title, scrollOffset)) {
+        displayScrollElement2();
+    };
+};
+
+window.addEventListener('scroll', () => {
+    handleScrollAnimation2();
 });
